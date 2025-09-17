@@ -11,6 +11,8 @@ events = (
     uinput.BTN_Y,
     uinput.BTN_TL,
     uinput.BTN_TR,
+    uinput.BTN_TR2,
+    uinput.BTN_MODE,
     uinput.BTN_SELECT,
     uinput.BTN_START,
     uinput.ABS_X + ( -32767, 32767, 0, 0),
