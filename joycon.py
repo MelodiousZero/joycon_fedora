@@ -44,6 +44,8 @@ for event in dev.read_loop():
             ui.emit(uinput.BTN_START, state)
         elif code == 316:  # BTN_MODE
             ui.emit(uinput.BTN_SELECT, state)
+        elif code == 313:  # BTN_MODE
+            ui.emit(uinput.BTN_TR2, state)
 
     elif event.type == ecodes.EV_ABS:
         if event.code == 3:  # ABS_RX
