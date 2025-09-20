@@ -10,6 +10,7 @@ events = (
     uinput.BTN_X,
     uinput.BTN_Y,
     uinput.BTN_TL,
+    uinput.BTN_TL2,
     uinput.BTN_TR,
     uinput.BTN_TR2,
     uinput.BTN_MODE,
@@ -46,7 +47,8 @@ for event in dev.read_loop():
             ui.emit(uinput.BTN_SELECT, state)
         elif code == 313:  # BTN_MODE
             ui.emit(uinput.BTN_TR2, state)
-
+        elif code == 312:  # BTN_MODE
+            ui.emit(uinput.BTN_TL2, state)
     elif event.type == ecodes.EV_ABS:
         if event.code == 3:  # ABS_RX
             ui.emit(uinput.ABS_X, event.value)
