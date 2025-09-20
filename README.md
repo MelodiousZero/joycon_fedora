@@ -12,11 +12,16 @@ This repository contains a Python script that creates a **virtual joystick** fro
   pip install evdev python-uinput
 
 ## Usage
-
-- Run on a terminal
+- If you have joycond enabled, run
+  ```bash
+  sudo systemctl stop joycond
+- Then run
+  ```bash
+  sudo modprobe uinput
+- Then run the python script
   ```bash
   sudo python joycon.py
-- Run on another terminal
+- Then run antimicrox
   ```bash
   antimicrox
 
